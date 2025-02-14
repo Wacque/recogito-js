@@ -5,11 +5,11 @@ import {
   WebAnnotation,
   createEnvironment,
   setLocale,
-} from "@recogito/recogito-client-core";
+} from "@wacque/recogito-client-core";
 import TextAnnotator from "./TextAnnotator";
 import { deflateHTML } from "./utils";
 
-import "@recogito/recogito-client-core/themes/default";
+import "@wacque/recogito-client-core/themes/default";
 
 /**
  * The entrypoint into the application. Provides the

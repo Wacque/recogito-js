@@ -1,4 +1,4 @@
-import { Selection } from "@recogito/recogito-client-core";
+import { Selection } from "@wacque/recogito-client-core";
 
 export const trimRange = (range) => {
   let quote = range.toString();
@@ -103,7 +103,7 @@ export const enableTouch = (element, selectHandler) => {
   const onTouchStart = (evt) => {
     if (!touchTimeout) {
       lastTouchEvent = evt;
-      touchTimeout = setTimeout(executeTouchSelect, 400);
+      touchTimeout = setTimeout(executeTouchSelect, 1000);
     }
   };
 
@@ -118,7 +118,7 @@ export const enableTouch = (element, selectHandler) => {
   const resetTouch = (evt) => {
     if (touchTimeout) {
       clearTimeout(touchTimeout);
-      touchTimeout = setTimeout(executeTouchSelect, 600);
+      touchTimeout = setTimeout(executeTouchSelect, 1500);
     }
   };
 

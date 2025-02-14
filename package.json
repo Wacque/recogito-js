@@ -1,6 +1,6 @@
 {
-  "name": "@recogito/recogito-js",
-  "version": "1.8.4",
+  "name": "@wacque/recogito-js",
+  "version": "1.8.6",
   "description": "A JavaScript library for text annotation",
   "main": "dist/recogito.min.js",
   "scripts": {
@@ -52,8 +52,11 @@
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
-    "@recogito/recogito-client-core": "file:/Users/wurengui/Code/code-advancex/recogito-client-core",
+    "@wacque/recogito-client-core": "^1.7.10",
     "preact": "^10.5.13",
     "tiny-emitter": "^2.1.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

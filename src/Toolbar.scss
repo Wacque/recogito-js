@@ -5,7 +5,8 @@
   border-radius: 8px; /* 圆角 */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影 */
   padding: 4px; /* 内边距 */
-  width: 100%;
+  max-width: 100%;
+  width: fit-content;
   overflow-x: scroll;
   scrollbar-width: none; /* 隐藏滚动条（Firefox） */
   -ms-overflow-style: none; /* 隐藏滚动条（IE/Edge） */
@@ -26,6 +27,7 @@
   font-size: 12px; /* 调整字体大小 */
   line-height: 1.2; /* 调整行高，使其更紧凑 */
   display: flex;
+  min-width: 40px;
   align-items: center;
   flex-direction: column;
   white-space: nowrap;

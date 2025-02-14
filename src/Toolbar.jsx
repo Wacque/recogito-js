@@ -9,13 +9,13 @@ const Toolbar = ({ onAction }) => {
 
   return (
     <div className="toolbar">
-      <button
+      {/* <button
         onClick={() => handleButtonClick("Highlight")}
         className="toolbar-button"
       >
         <span className="icon">A</span> Highlight
-      </button>
-      <div className="divider" />
+      </button> */}
+      {/* <div className="divider" /> */}
       <button
         onClick={() => handleButtonClick("Comment")}
         className="toolbar-button"
@@ -29,8 +29,8 @@ const Toolbar = ({ onAction }) => {
       >
         <span className="icon">📋</span> Copy
       </button>
-      <div className="divider" />
-      <button
+      {/* <div className="divider" /> */}
+      {/* <button
         onClick={() => handleButtonClick("Share")}
         className="toolbar-button"
       >
@@ -42,7 +42,7 @@ const Toolbar = ({ onAction }) => {
         className="toolbar-button"
       >
         <span className="icon">🤖</span> Ask AI
-      </button>
+      </button> */}
     </div>
   );
 };

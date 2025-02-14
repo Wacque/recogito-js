@@ -1,0 +1,52 @@
+.toolbar {
+  display: flex;
+  align-items: center;
+  background-color: white; /* 背景颜色 */
+  border-radius: 8px; /* 圆角 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影 */
+  padding: 4px; /* 内边距 */
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none; /* 隐藏滚动条（Firefox） */
+  -ms-overflow-style: none; /* 隐藏滚动条（IE/Edge） */
+  box-shadow: 0px 4px 12px 0px #00000033;
+  /* 隐藏滚动条（Chrome/Safari） */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.toolbar-button {
+  background: none;
+  font-weight: 500;
+  border: none;
+  color: #333; /* 字体颜色 */
+  cursor: pointer;
+  font-family: "Arial", sans-serif; /* 使用更紧凑的字体 */
+  font-size: 12px; /* 调整字体大小 */
+  line-height: 1.2; /* 调整行高，使其更紧凑 */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  white-space: nowrap;
+  padding: 6px 10px; /* 减少按钮内边距，使其更紧凑 */
+  transition: background-color 0.3s; /* 背景颜色过渡 */
+
+  &:hover {
+    background-color: #f0f0f0; /* 悬停时背景颜色 */
+  }
+
+  .icon {
+    margin-right: 4px; /* 图标与文本之间的间距 */
+    margin-bottom: 2px; /* 减少图标与文本之间的间距 */
+  }
+}
+
+.divider {
+  width: 1px; /* 分隔线宽度 */
+  flex: 0 0 1px;
+  height: 24px; /* 分隔线高度 */
+  background-color: #ccc; /* 分隔线颜色 */
+  margin: 0 3px; /* 分隔线的左右间距 */
+  display: block; /* 确保分隔线显示 */
+}

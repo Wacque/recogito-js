@@ -17,6 +17,9 @@ const Toolbar = ({ onAction }) => {
       </button> */}
       {/* <div className="divider" /> */}
       <button
+        style={{
+          width: "66px",
+        }}
         onClick={() => handleButtonClick("Comment")}
         className="toolbar-button"
       >
@@ -24,6 +27,9 @@ const Toolbar = ({ onAction }) => {
       </button>
       <div className="divider" />
       <button
+        style={{
+          width: "66px",
+        }}
         onClick={() => handleButtonClick("Copy")}
         className="toolbar-button"
       >

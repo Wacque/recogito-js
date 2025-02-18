@@ -103,7 +103,7 @@ export const enableTouch = (element, selectHandler) => {
   const onTouchStart = (evt) => {
     if (!touchTimeout) {
       lastTouchEvent = evt;
-      touchTimeout = setTimeout(executeTouchSelect, 1000);
+      touchTimeout = setTimeout(executeTouchSelect, 0);
     }
   };
 
@@ -118,7 +118,7 @@ export const enableTouch = (element, selectHandler) => {
   const resetTouch = (evt) => {
     if (touchTimeout) {
       clearTimeout(touchTimeout);
-      touchTimeout = setTimeout(executeTouchSelect, 1500);
+      touchTimeout = setTimeout(executeTouchSelect, 500);
     }
   };
 

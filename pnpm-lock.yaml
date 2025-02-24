@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@wacque/recogito-client-core':
-    specifier: file:/Users/wurengui/Code/code-advancex/recogito-client-core
-    version: file:../recogito-client-core(react-dom@16.14.0)(react@16.14.0)
+    specifier: ^1.7.10
+    version: 1.7.10(react-dom@16.14.0)(react@16.14.0)
   preact:
     specifier: ^10.5.13
     version: 10.25.4
@@ -1646,6 +1646,26 @@ packages:
     dependencies:
       '@types/node': 22.13.2
     dev: true
+
+  /@wacque/recogito-client-core@1.7.10(react-dom@16.14.0)(react@16.14.0):
+    resolution: {integrity: sha512-EJGGwN1wY0KC4/nECIDsm8fYcpwRaerwBMDRcSUylxCe9Jj/LVoMkvIX7mEI54Ck1U/r4MMdbqRsXVwnMqEnLQ==}
+    dependencies:
+      core-js: 3.40.0
+      fast-deep-equal: 3.1.3
+      node-polyglot: 2.6.0
+      react-autosize-textarea: 7.1.0(react-dom@16.14.0)(react@16.14.0)
+      react-draggable: 4.4.6(react-dom@16.14.0)(react@16.14.0)
+      react-select: 4.3.1(react-dom@16.14.0)(react@16.14.0)
+      react-transition-group: 4.4.5(react-dom@16.14.0)(react@16.14.0)
+      regenerator-runtime: 0.13.11
+      timeago-react: 3.0.6(react@16.14.0)
+      uuid: 8.3.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - react
+      - react-dom
+      - supports-color
+    dev: false
 
   /@webassemblyjs/ast@1.14.1:
     resolution: {integrity: sha512-nuBEDgQfm1ccRp/8bCQrx1frohyufl4JlbMMZ4P1wpeOfDhF6FQkxZJ1b/e+PLwr6X1Nhw6OLme5usuBWYBvuQ==}
@@ -5323,26 +5343,4 @@ packages:
   /yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
-    dev: false
-
-  file:../recogito-client-core(react-dom@16.14.0)(react@16.14.0):
-    resolution: {directory: ../recogito-client-core, type: directory}
-    id: file:../recogito-client-core
-    name: '@wacque/recogito-client-core'
-    dependencies:
-      core-js: 3.40.0
-      fast-deep-equal: 3.1.3
-      node-polyglot: 2.6.0
-      react-autosize-textarea: 7.1.0(react-dom@16.14.0)(react@16.14.0)
-      react-draggable: 4.4.6(react-dom@16.14.0)(react@16.14.0)
-      react-select: 4.3.1(react-dom@16.14.0)(react@16.14.0)
-      react-transition-group: 4.4.5(react-dom@16.14.0)(react@16.14.0)
-      regenerator-runtime: 0.13.11
-      timeago-react: 3.0.6(react@16.14.0)
-      uuid: 8.3.2
-    transitivePeerDependencies:
-      - '@types/react'
-      - react
-      - react-dom
-      - supports-color
     dev: false

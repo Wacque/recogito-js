@@ -9,13 +9,13 @@ const Toolbar = ({ onAction }) => {
 
   return (
     <div className="toolbar">
-      {/* <button
+      <button
         onClick={() => handleButtonClick("Highlight")}
         className="toolbar-button"
       >
         <span className="icon">A</span> Highlight
-      </button> */}
-      {/* <div className="divider" /> */}
+      </button>
+      <div className="divider" />
       <button
         style={{
           width: "66px",

@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RecogitoJS | Development</title>
     <link
       href="https://fonts.googleapis.com/css?family=Lato&display=swap"
@@ -218,6 +219,65 @@
             "change",
             (event) => (r.readOnly = event.currentTarget.checked)
           );
+
+        function clearSelection() {
+          if (window.getSelection) {
+            if (window.getSelection().rangeCount > 0) {
+              window.getSelection().removeAllRanges();
+            }
+          } else if (document.selection) {
+            if (document.selection.type !== "Control") {
+              document.selection.empty();
+            }
+          }
+        }
+
+        // 监听 postMessage 事件
+        window.addEventListener("message", function (event) {
+          // 确保消息来源是可信的
+          console.log("event", event.data);
+          if (event.data.type === "toolbar") {
+            if (event.data.data === "highlight") {
+              r.addSelection((selectionRes) => {
+                const underlying = selectionRes.underlying;
+                const highlighted = Object.assign({}, underlying, {
+                  id: Math.random().toString(36).substr(2, 9),
+                  body: [
+                    {
+                      type: "TextualBody",
+                      value: "This annotation was added via JS.",
+                      purpose: "highlight",
+                    },
+                  ],
+                });
+                console.log("selectionRes", selectionRes);
+                console.log(highlighted);
+                r.addAnnotation(highlighted);
+              });
+            } else if (event.data.data === "comment") {
+              r.addSelection((selectionRes) => {
+                const underlying = selectionRes.underlying;
+                const highlighted = Object.assign({}, underlying, {
+                  id: Math.random().toString(36).substr(2, 9),
+                  body: [
+                    {
+                      type: "TextualBody",
+                      value: "this is a comment.",
+                      purpose: "commenting",
+                    },
+                  ],
+                });
+                console.log("selectionRes", selectionRes);
+                console.log(highlighted);
+                r.addAnnotation(highlighted);
+              });
+            }
+          }
+          // if (event.origin === "http://your-trusted-origin.com") {
+          // 调用  方法
+          // r.addSelection(event.data);
+          // }
+        });
       })();
     </script>
   </body>

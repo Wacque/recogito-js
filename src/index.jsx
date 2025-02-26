@@ -116,8 +116,16 @@ export class Recogito {
       ? new WebAnnotation(annotationOrId)
       : annotationOrId;
 
-  addAnnotation = (annotation) =>
-    this._app.current.addAnnotation(new WebAnnotation(annotation));
+  addAnnotation = (annotation) => {
+    console.log(
+      "addAnnotation11111",
+      annotation,
+      new WebAnnotation(annotation)
+    );
+    return this._app.current.addAnnotation(new WebAnnotation(annotation));
+  };
+
+  addSelection = (cb) => this._app.current.addSelection(cb);
 
   clearAnnotations = () => this.setAnnotations(null);
 

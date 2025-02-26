@@ -300,6 +300,17 @@ export default class TextAnnotator extends Component {
     this.highlighter.addOrUpdateAnnotation(annotation.clone());
   };
 
+  addSelection = (cb) => {
+    const selection = this.selectionHandler.handleSelection().clone();
+
+    setTimeout(() => {
+      console.log("selection123456", selection);
+      this.onCancelAnnotation(this.state.selectedAnnotation);
+      console.log("selection12345611", selection);
+      cb(selection);
+    }, 20);
+  };
+
   get disableSelect() {
     return !this.selectionHandler.enabled;
   }
@@ -420,10 +431,7 @@ export default class TextAnnotator extends Component {
 
     const readOnly =
       this.state.readOnly || this.state.selectedAnnotation?.readOnly;
-    console.log(
-      " this.state.selectedAnnotation",
-      this.state.selectedAnnotation
-    );
+
     return (
       open && (
         <>
@@ -453,7 +461,7 @@ export default class TextAnnotator extends Component {
                 onCancel={this.onCancelAnnotation}
               >
                 {/* 也需要传递 annotation */}
-                <Toolbar onAction={this.handleToolbarAction} />
+                {/* <Toolbar onAction={this.handleToolbarAction} /> */}
               </Editor>
             )}
 

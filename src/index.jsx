@@ -103,8 +103,10 @@ export class Recogito {
   handleAnnotationDeleted = (annotation) =>
     this._emitter.emit("deleteAnnotation", annotation.underlying);
 
-  handleCancelSelected = (annotation) =>
-    this._emitter.emit("cancelSelected", annotation.underlying);
+  handleCancelSelected = (annotation) => {
+    console.log("handleCancelSelected", annotation);
+    return this._emitter.emit("cancelSelected", annotation.underlying);
+  };
 
   /******************/
   /*  External API  */

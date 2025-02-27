@@ -94,15 +94,11 @@ export default class SelectionHandler extends EventEmitter {
             `.r6o-annotation[data-id="${top.id}"]`
           ),
         });
-
-        return top;
       } else {
         this.emit("select", {
           selection: stub,
           element: selectedRange,
         });
-
-        return stub;
       }
     }
   }

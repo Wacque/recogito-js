@@ -301,14 +301,15 @@ export default class TextAnnotator extends Component {
   };
 
   addSelection = (cb) => {
-    const selection = this.selectionHandler.handleSelection().clone();
+    console.log("addSelection================");
+    this.selectionHandler.handleSelection();
 
     setTimeout(() => {
-      console.log("selection123456", selection);
+      console.log("selection123456", this.state.selectedAnnotation);
       this.onCancelAnnotation(this.state.selectedAnnotation);
-      console.log("selection12345611", selection);
-      cb(selection);
-    }, 20);
+      console.log("selection12345611", this.state.selectedAnnotation);
+      cb(this.state.selectedAnnotation);
+    }, 50);
   };
 
   get disableSelect() {
